@@ -1,0 +1,157 @@
+/* font-family: 'Orbitron', sans-serif; */
+
+/* #3C486B
+#F0F0F0
+#F9D949
+#F45050 */
+
+* {
+    margin: 0;
+}
+
+body {
+    background: #3C486B;
+    color: #F0F0F0;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    background: #F9D949;
+    height: 500px;
+    width: min(85%, 600px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+    border-radius: 1in;
+    box-shadow: 8px 8px #F45050, 10px 10px #111;
+}
+
+.heading {
+    font-size: 50px;
+    text-shadow: 0px 8px #F45050, 0px 10px #111;
+    padding: 0 30px;
+}
+
+h1::selection{
+    color: #3C486B;
+    background-color: #F9D949;
+}
+
+.dice {
+    background: #F45050;
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    box-shadow: 0 0 0 2px #111;
+    position: relative;
+}
+
+/* dice numbers */
+
+.dots {
+    background: #F0F0F0;
+    height: 50px; 
+    width: 50px;
+    border-radius: 1in;
+    position: absolute;
+}
+
+.one {
+    left: 75px;
+    top: 75px;
+}
+
+.two {
+    left: 20px;
+    top: 20px;
+    box-shadow: 112px 112px;
+}
+
+.three {
+    left: 20px;
+    top: 20px;
+    box-shadow: 112px 112px, 57px 57px;
+}
+
+.four {
+    left: 20px;
+    top: 20px;
+    box-shadow: 112px 112px, 112px 0, 0 112px;
+}
+
+.five {
+    left: 20px;
+    top: 20px;
+    box-shadow: 112px 112px, 112px 0, 0 112px, 57px 57px;
+}
+
+.six {
+    left: 20px;
+    top: 20px;
+    box-shadow: 112px 112px, 112px 0, 0 112px, 0 57px, 112px 57px;
+}
+
+
+/* footer */
+footer {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+p::selection {
+    background-color: #F9D949;
+    color: #3C486B;
+}
+
+
+
+@media (max-width:650px){
+    .card {
+        flex-direction: column;
+    }
+    .dice {
+        height: 160px;
+        width: 160px;
+    }
+    .heading {
+        font-size: 40px;
+    }
+
+    /* dice numbers */
+    .dots {
+        height: 30px;
+        width: 30px;
+    }
+    .one {
+        left: 65px;
+        top: 65px;
+    }
+    .two{
+        box-shadow: 90px 90px;
+    }
+    .three {
+        box-shadow: 90px 90px, 45px 45px;
+    }
+    .four {
+        box-shadow: 90px 90px, 0 90px, 90px 0;
+    }
+    .five {
+        box-shadow: 90px 90px, 0 90px, 90px 0, 45px 45px;
+    }
+    .six {
+        box-shadow: 90px 90px, 0 90px, 90px 0, 0 45px, 90px 45px;
+    }
+    
+}
