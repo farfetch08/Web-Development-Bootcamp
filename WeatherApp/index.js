@@ -20,8 +20,15 @@ app.post("/", (req, res)=>{
             // console.log(d);
             const weatherData = JSON.parse(d);
             console.log(weatherData);
+            const description = weatherData.weather[0].description;
             const temp = weatherData.main.temp;
-            res.write(`The temperature in ${city} is currently ${temp} degree celsius`);
+            const iconName = weatherData.weather[0].icon;
+            const icon = "https://openweathermap.org/img/wn/"+iconName+"@2x.png";
+
+
+            res.write("<p>The weather is currently " + description + "</p>");
+            res.write("<h1>The temperature in "+city+" is currently "+temp+" degrees Celsius</h1>");
+            res.write("<img src="+icon+">");
             res.send();
         })
     })
