@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", (req, res)=>{
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html"); // __dirname is working here because it's type is set to "commonjs"
 })
 
 app.post("/", (req, res)=>{
