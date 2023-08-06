@@ -1,0 +1,32 @@
+<%= variable %> --- JS Output
+
+<% console.log("hello") %> --- JS Execute
+
+<%- <h1>Hello</h1> %> --- Render HTML
+
+<%% %%> --- Show <% or %>
+
+<%# This is a comment %> --- Stop Execution
+
+<%- include("header.ejs") %> --- Insert another EJS file
+
+
+// from server to ejs
+-------------------------------------
+###---What if there is no Data?---###
+-------------------------------------
+app.get("/", (req, res)=>{
+	res.render("index.ejs");
+});
+-------------------------------------
+-------------------------------------
+<% if(locals.fruits){ %>
+  <ul>
+    <% fruits.forEach((fruit)=>{ %>
+      <li>
+	<%= fruit %>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+--------------------------------------
