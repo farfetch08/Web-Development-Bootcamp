@@ -1,7 +1,12 @@
 Array.filter() =====>
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-
 const result = words.filter((word) => word.length > 6);
-
 console.log(result);
 // Expected output: Array ["exuberant", "destruction", "present"]
+
+
+Array.find() =====>
+const array1 = [5, 12, 8, 130, 44];
+const found = array1.find((element) => element > 10);
+console.log(found);
+// Expected output: 12
